@@ -26,7 +26,6 @@ class Silverfort:
         url = '{0}{1}{2}'.format(self.server_url, '/v1/public/', endpoint)
         logger.info('Request URL {}'.format(url))
         headers = {'Authorization': 'Bearer {0}'.format(token)}
-        return
         try:
             response = requests.request(method=method, url=url,
                                         params=params, headers=headers, data=data, json=json, verify=self.verify_ssl)
@@ -72,7 +71,6 @@ class Silverfort:
         else:
             payload['sam_account'] = params.get('sam_account')
         response = self.make_api_call('getUPN', params=payload)
-        return "upn"
         return response.get('user_principal_name')
 
 
