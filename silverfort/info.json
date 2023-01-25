@@ -153,7 +153,7 @@
     {
       "operation": "get_resource_risk",
       "title": "Get Resource Risk",
-      "description": "Retrieves details about risk associated with specific resource from Silverfort based on the input parameter you have specified.",
+      "description": "Retrieves details about risk associated with specific resource from Silverfort based on the resource name and domain you have specified.",
       "category": "investigation",
       "annotation": "get_resource_risk",
       "output_schema": {

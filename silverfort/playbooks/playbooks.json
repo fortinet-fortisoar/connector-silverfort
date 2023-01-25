@@ -2,7 +2,7 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "5ea3fba6-150d-4231-b74c-ff361bc20b89",
+      "uuid": "1c96f75a-df96-44be-b757-e10b8093950d",
       "@type": "WorkflowCollection",
       "name": "Sample - Silverfort - 1.0.0",
       "description": "Silverfort delivers adaptive authentication across all corporate networks and cloud environments from a unified platform. This integration is used to gather and update risk associated with a user or resource from Silverfort.",
@@ -14,8 +14,8 @@
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "f7d30f90-c147-4dc1-91a4-76462dbf666a",
-          "collection": "/api/3/workflow_collections/5ea3fba6-150d-4231-b74c-ff361bc20b89",
+          "uuid": "ee397072-ca0a-4bc5-9cb5-3d319e34433d",
+          "collection": "/api/3/workflow_collections/1c96f75a-df96-44be-b757-e10b8093950d",
           "triggerLimit": null,
           "description": "Retrieves details about risk associated with specific user from Silverfort based on the input parameter you have specified. You can choose among following options: 1.User Principal Name, 2.email & domain or 3.SAM account and domain",
           "name": "Get User Risk",
@@ -28,16 +28,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/1f7fd2cc-9082-455a-90be-4f0dbb908fb0",
+          "triggerStep": "/api/3/workflow_steps/3ecc15b1-57a9-4fd7-81f9-286bd0390387",
           "steps": [
             {
-              "uuid": "1f7fd2cc-9082-455a-90be-4f0dbb908fb0",
+              "uuid": "3ecc15b1-57a9-4fd7-81f9-286bd0390387",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "614e01dc-3ed0-4b1f-836a-79ad71431478",
+                "route": "b3739c82-1dff-4ab3-9152-e4ac279fe94e",
                 "title": "Silverfort: Get User Risk",
                 "resources": [
                   "alerts"
@@ -57,7 +57,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "d445af8f-539b-45aa-bcb8-f58fe5ae87ce",
+              "uuid": "1af1fa1d-2409-4794-ae86-a0e3ea15a454",
               "@type": "WorkflowStep",
               "name": "Get User Risk",
               "description": null,
@@ -84,21 +84,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "1c5f3266-f531-47a9-98aa-0a8913cc5f78",
+              "uuid": "de1b7845-c41e-4ef6-844a-dc1f0368ec9b",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get User Risk",
-              "sourceStep": "/api/3/workflow_steps/1f7fd2cc-9082-455a-90be-4f0dbb908fb0",
-              "targetStep": "/api/3/workflow_steps/d445af8f-539b-45aa-bcb8-f58fe5ae87ce"
+              "sourceStep": "/api/3/workflow_steps/3ecc15b1-57a9-4fd7-81f9-286bd0390387",
+              "targetStep": "/api/3/workflow_steps/1af1fa1d-2409-4794-ae86-a0e3ea15a454"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "9fabc7f1-a8f2-4701-bde4-94c97161b7ec",
-          "collection": "/api/3/workflow_collections/5ea3fba6-150d-4231-b74c-ff361bc20b89",
+          "uuid": "804e12c1-aa9e-4953-8aa7-413693cda86e",
+          "collection": "/api/3/workflow_collections/1c96f75a-df96-44be-b757-e10b8093950d",
           "triggerLimit": null,
-          "description": "Retrieves details about risk associated with specific resource from Silverfort based on the input parameter you have specified.",
+          "description": "Retrieves details about risk associated with specific resource from Silverfort based on the resource name and domain you have specified.",
           "name": "Get Resource Risk",
           "tag": "#Silverfort",
           "recordTags": [
@@ -109,16 +109,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/08c2f0ad-1ea4-47c8-a92c-0d6d297e917d",
+          "triggerStep": "/api/3/workflow_steps/9bd77408-a557-4c79-9abc-6129e32ace6e",
           "steps": [
             {
-              "uuid": "08c2f0ad-1ea4-47c8-a92c-0d6d297e917d",
+              "uuid": "9bd77408-a557-4c79-9abc-6129e32ace6e",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "dc62333d-09ad-49aa-9870-3304643b7ac0",
+                "route": "e881c0a2-ba5d-4136-a114-f6ccab6cd06b",
                 "title": "Silverfort: Get Resource Risk",
                 "resources": [
                   "alerts"
@@ -138,7 +138,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "e6ea879f-a2b6-4055-924e-18d3f61dcfee",
+              "uuid": "14df412f-411c-47fc-8bfc-746ffbe79c48",
               "@type": "WorkflowStep",
               "name": "Get Resource Risk",
               "description": null,
@@ -163,19 +163,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "2864db96-9628-41c0-a4ca-b6272bf86e2c",
+              "uuid": "8f8dbe31-0271-49ff-9a0b-e74355f8aed6",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Resource Risk",
-              "sourceStep": "/api/3/workflow_steps/08c2f0ad-1ea4-47c8-a92c-0d6d297e917d",
-              "targetStep": "/api/3/workflow_steps/e6ea879f-a2b6-4055-924e-18d3f61dcfee"
+              "sourceStep": "/api/3/workflow_steps/9bd77408-a557-4c79-9abc-6129e32ace6e",
+              "targetStep": "/api/3/workflow_steps/14df412f-411c-47fc-8bfc-746ffbe79c48"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "ab9ea574-b6c6-4aac-a53d-14741ca0973d",
-          "collection": "/api/3/workflow_collections/5ea3fba6-150d-4231-b74c-ff361bc20b89",
+          "uuid": "7e2d1a89-9791-47c4-8195-a2ec087a5b6d",
+          "collection": "/api/3/workflow_collections/1c96f75a-df96-44be-b757-e10b8093950d",
           "triggerLimit": null,
           "description": "Updates details about risk associated with specific user based on the input parameter you have specified. You can choose among following options: 1.User Principal Name, 2.email & domain or 3.SAM account and domain",
           "name": "Update User Risk",
@@ -188,16 +188,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cd44a938-5a74-44ca-b2e5-b649b0579fef",
+          "triggerStep": "/api/3/workflow_steps/bf0469cf-0f77-4a35-87b2-b357bf5c87b5",
           "steps": [
             {
-              "uuid": "cd44a938-5a74-44ca-b2e5-b649b0579fef",
+              "uuid": "bf0469cf-0f77-4a35-87b2-b357bf5c87b5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "5816efce-aa12-49b2-ad4a-4204acc55197",
+                "route": "5ce024ee-bd48-4915-9e7b-5e58eb3e1c12",
                 "title": "Silverfort: Update User Risk",
                 "resources": [
                   "alerts"
@@ -217,7 +217,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "0dacbaa1-5efa-4163-bf74-b9571eba2785",
+              "uuid": "90624154-6b47-4e97-94c3-62f88b56d9ab",
               "@type": "WorkflowStep",
               "name": "Update User Risk",
               "description": null,
@@ -244,19 +244,19 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "9d3bfe62-7c85-4eba-a2b5-496f7188e27b",
+              "uuid": "885d3666-517b-4387-97d3-91a6072398ab",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update User Risk",
-              "sourceStep": "/api/3/workflow_steps/cd44a938-5a74-44ca-b2e5-b649b0579fef",
-              "targetStep": "/api/3/workflow_steps/0dacbaa1-5efa-4163-bf74-b9571eba2785"
+              "sourceStep": "/api/3/workflow_steps/bf0469cf-0f77-4a35-87b2-b357bf5c87b5",
+              "targetStep": "/api/3/workflow_steps/90624154-6b47-4e97-94c3-62f88b56d9ab"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "814eb8e3-8b20-4b41-8c2f-3f0e3debbc6a",
-          "collection": "/api/3/workflow_collections/5ea3fba6-150d-4231-b74c-ff361bc20b89",
+          "uuid": "9af36030-df82-4223-b40c-ed6a216d5107",
+          "collection": "/api/3/workflow_collections/1c96f75a-df96-44be-b757-e10b8093950d",
           "triggerLimit": null,
           "description": "Updates details of risk associated with specific resource on Silverfort based on the resource name and domain you have specified.",
           "name": "Update Resource Risk",
@@ -269,16 +269,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/b3f318ab-3cf8-40d7-967d-52832a020a0b",
+          "triggerStep": "/api/3/workflow_steps/c9efc9c6-674f-4be4-a68b-0c1661e3c1c8",
           "steps": [
             {
-              "uuid": "b3f318ab-3cf8-40d7-967d-52832a020a0b",
+              "uuid": "c9efc9c6-674f-4be4-a68b-0c1661e3c1c8",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "c46f0eca-b812-4eb0-bad9-5220e0d5e91d",
+                "route": "e1a2314f-1b52-4767-9ddc-51f530ed5fda",
                 "title": "Silverfort: Update Resource Risk",
                 "resources": [
                   "alerts"
@@ -298,7 +298,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "9fd92d01-c560-4380-a5ec-6f25ef7b7829",
+              "uuid": "0e917ea3-dd25-4989-a894-8ea0544b18f8",
               "@type": "WorkflowStep",
               "name": "Update Resource Risk",
               "description": null,
@@ -323,12 +323,12 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "940824ea-e27e-48c7-924a-b55d43a631c6",
+              "uuid": "e0d5132e-7d91-4472-bc41-64630ed20219",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update Resource Risk",
-              "sourceStep": "/api/3/workflow_steps/b3f318ab-3cf8-40d7-967d-52832a020a0b",
-              "targetStep": "/api/3/workflow_steps/9fd92d01-c560-4380-a5ec-6f25ef7b7829"
+              "sourceStep": "/api/3/workflow_steps/c9efc9c6-674f-4be4-a68b-0c1661e3c1c8",
+              "targetStep": "/api/3/workflow_steps/0e917ea3-dd25-4989-a894-8ea0544b18f8"
             }
           ]
         }
