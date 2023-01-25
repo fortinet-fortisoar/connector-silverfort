@@ -1,0 +1,395 @@
+{
+  "name": "silverfort",
+  "label": "Silverfort",
+  "description": "Silverfort delivers adaptive authentication across all corporate networks and cloud environments from a unified platform. This integration is used to gather and update risk associated with a user or resource from Silverfort.",
+  "publisher": "Fortinet",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "version": "1.0.0",
+  "category": "Identity and Access Management",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "name": "server_url",
+        "placeholder": "",
+        "description": "URL of the Silverfort server to which you will connect and perform the automated operations.",
+        "tooltip": "URL of the Silverfort server to which you will connect and perform the automated operations."
+      },
+      {
+        "title": "User ID",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "text",
+        "name": "user_id",
+        "description": "User ID which you have created on Silverfort which is used to create an authentication token required to access the API.",
+        "tooltip": "User ID which you have created on Silverfort which is used to create an authentication token required to access the API."
+      },
+      {
+        "title": "User Secret",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "password",
+        "name": "user_secret",
+        "description": "User Secret of the user that is used to create an authentication token required to access the API.",
+        "tooltip": "User Secret of the user that is used to create an authentication token required to access the API."
+      },
+      {
+        "title": "Verify SSL",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "type": "checkbox",
+        "name": "verify_ssl",
+        "value": true,
+        "description": "Specifies whether the SSL certificate for the server is to be verified or not. By default, this option is set as True.",
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified or not. By default, this option is set as True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_user_risk",
+      "title": "Get User Risk",
+      "description": "Retrieves details about risk associated with specific user from Silverfort based on the input parameter you have specified. You can choose among following options: 1.User Principal Name, 2.email & domain or 3.SAM account and domain",
+      "category": "investigation",
+      "annotation": "get_user_risk",
+      "output_schema": {
+          "Silverfort": {
+              "UserRisk": {
+                  "Reasons": [],
+                  "Risk": "",
+                  "UPN": ""
+              }
+          }
+      },
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "User Identification",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "select",
+          "options": [
+            "User Principal Name",
+            "Email & Domain",
+            "SAM Account & Domain"
+          ],
+          "name": "user_identification",
+          "value": "User Principal Name",
+          "tooltip": "Select one of the method to get details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
+          "description": "Select one of the method to get details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
+          "onchange": {
+            "User Principal Name": [
+              {
+                "title": "User Principal Name",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "upn",
+                "description": "The User Principal Name of the user for which you want to get the risk details.",
+                "tooltip": "The User Principal Name of the user for which you want to get the risk details."
+              }
+            ],
+            "Email & Domain": [
+              {
+                "title": "Email",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "email",
+                "tooltip": "The Email of the user for which you want to get the risk details.",
+                "description": "The Email of the user for which you want to get the risk details."
+              },
+              {
+                "title": "Domain",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "domain",
+                "tooltip": "The Domain of the user for which you want to get the risk details.",
+                "description": "The Domain of the user for which you want to get the risk details."
+              }
+            ],
+            "SAM Account & Domain": [
+              {
+                "title": "SAM Account",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "sam_account",
+                "tooltip": "The SAM Account of the user for which you want to get the risk details.",
+                "description": "The SAM Account of the user for which you want to get the risk details."
+              },
+              {
+                "title": "Domain",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "domain",
+                "tooltip": "The Domain of the user for which you want to get the risk details.",
+                "description": "The Domain of the user for which you want to get the risk details."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "operation": "get_resource_risk",
+      "title": "Get Resource Risk",
+      "description": "Retrieves details about risk associated with specific resource from Silverfort based on the input parameter you have specified.",
+      "category": "investigation",
+      "annotation": "get_resource_risk",
+      "output_schema": {
+          "Silverfort": {
+              "ResourceRisk": {
+                  "Reasons": [],
+                  "ResourceName": "",
+                  "Risk": ""
+              }
+          }
+      },
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Resource Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "resource_name",
+          "tooltip": "The Name of the resource for which you want to get the risk details.",
+          "description": "The Name of the resource for which you want to get the risk details."
+        },
+        {
+          "title": "Domain",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "domain",
+          "tooltip": "The Domain of the resource for which you want to get the risk details.",
+          "description": "The Domain of the resource for which you want to get the risk details."
+        }
+      ]
+    },
+    {
+      "operation": "update_user_risk",
+      "title": "Update User Risk",
+      "description": "Updates details about risk associated with specific user based on the input parameter you have specified. You can choose among following options: 1.User Principal Name, 2.email & domain or 3.SAM account and domain",
+      "category": "investigation",
+      "annotation": "update_user_risk",
+      "output_schema": {
+        "status": "",
+        "message": ""
+      },
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "User Identification",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "select",
+          "options": [
+            "User Principal Name",
+            "Email & Domain",
+            "SAM Account & Domain"
+          ],
+          "name": "user_identification",
+          "value": "User Principal Name",
+          "tooltip": "Select one of the method to update details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
+          "description": "Select one of the method to update details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
+          "onchange": {
+            "User Principal Name": [
+              {
+                "title": "User Principal Name",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "upn",
+                "description": "The User Principal Name of the user for which you want to update the risk details.",
+                "tooltip": "The User Principal Name of the user for which you want to update the risk details."
+              }
+            ],
+            "Email & Domain": [
+              {
+                "title": "Email",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "email",
+                "tooltip": "The Email of the user for which you want to update the risk details.",
+                "description": "The Email of the user for which you want to update the risk details."
+              },
+              {
+                "title": "Domain",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "domain",
+                "tooltip": "The Domain of the user for which you want to update the risk details.",
+                "description": "The Domain of the user for which you want to update the risk details."
+              }
+            ],
+            "SAM Account & Domain": [
+              {
+                "title": "SAM Account",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "sam_account",
+                "tooltip": "The SAM Account of the user for which you want to update the risk details.",
+                "description": "The SAM Account of the user for which you want to update the risk details."
+              },
+              {
+                "title": "Domain",
+                "required": true,
+                "editable": true,
+                "visible": true,
+                "type": "text",
+                "name": "domain",
+                "tooltip": "The Domain of the user for which you want to update the risk details.",
+                "description": "The Domain of the user for which you want to update the risk details."
+              }
+            ]
+          }
+        },
+        {
+          "title": "Risk Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "risk_name",
+          "tooltip": "The name of the risk to be updated on Silverfort.",
+          "description": "The name of the risk to be updated on Silverfort."
+        },
+        {
+          "title": "Severity",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "severity",
+          "tooltip": "The Severity of the risk to be updated on Silverfort.",
+          "description": "The Severity of the risk to be updated on Silverfort."
+        },
+        {
+          "title": "Valid For",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "integer",
+          "name": "valid_for",
+          "tooltip": "Time in hours for which the risk will be valid for.",
+          "description": "Time in hours for which the risk will be valid for."
+        },
+        {
+          "title": "Description",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "description",
+          "tooltip": "The Description about the risk to be updated on Silverfort.",
+          "description": "The Description about the risk to be updated on Silverfort."
+        }
+      ]
+    },
+    {
+      "operation": "update_resource_risk",
+      "title": "Update Resource Risk",
+      "description": "Updates details of risk associated with specific resource on Silverfort based on the resource name and domain you have specified.",
+      "category": "investigation",
+      "annotation": "update_resource_risk",
+      "output_schema": {
+        "status": "",
+        "message": ""
+      },
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Resource Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "resource_name",
+          "tooltip": "The Name of the resource for which you want to update the risk details.",
+          "description": "The Name of the resource for which you want to update the risk details."
+        },
+        {
+          "title": "Domain",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "domain",
+          "tooltip": "The Domain of the resource for which you want to update the risk details.",
+          "description": "The Domain of the resource for which you want to update the risk details."
+        },
+        {
+          "title": "Risk Name",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "risk_name",
+          "tooltip": "The name of the risk to be updated on Silverfort.",
+          "description": "The name of the risk to be updated on Silverfort."
+        },
+        {
+          "title": "Severity",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "severity",
+          "tooltip": "The Severity of the risk to be updated on Silverfort.",
+          "description": "The Severity of the risk to be updated on Silverfort."
+        },
+        {
+          "title": "Valid For",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "integer",
+          "name": "valid_for",
+          "tooltip": "Time in hours for which the risk will be valid for.",
+          "description": "Time in hours for which the risk will be valid for."
+        },
+        {
+          "title": "Description",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "description",
+          "tooltip": "The Description about the risk to be updated on Silverfort.",
+          "description": "The Description about the risk to be updated on Silverfort."
+        }
+      ]
+    }
+  ]
+}
