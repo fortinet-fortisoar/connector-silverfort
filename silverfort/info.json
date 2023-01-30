@@ -19,7 +19,6 @@
         "visible": true,
         "type": "text",
         "name": "server_url",
-        "placeholder": "",
         "description": "URL of the Silverfort server to which you will connect and perform the automated operations.",
         "tooltip": "URL of the Silverfort server to which you will connect and perform the automated operations."
       },

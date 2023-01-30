@@ -24,7 +24,7 @@ class Silverfort:
     def make_api_call(self, endpoint, method='GET', params=None, data=None, json=None):
         token = self.get_jwt()
         url = '{0}{1}{2}'.format(self.server_url, '/v1/public/', endpoint)
-        logger.info('Request URL {}'.format(url))
+        logger.info('Request URL {0}'.format(url))
         headers = {'Authorization': 'Bearer {0}'.format(token)}
         try:
             response = requests.request(method=method, url=url,
@@ -132,8 +132,8 @@ def check_health(config):
         if response["status"] == "Active" or response["status"] == "Standby":
             return True
     except Exception as Err:
-        logger.exception('Error occurred while connecting server: {}'.format(str(Err)))
-        raise ConnectorError('Error occurred while connecting server: {}'.format(Err))
+        logger.exception('Error occurred while connecting server: {0}'.format(str(Err)))
+        raise ConnectorError('Error occurred while connecting server: {0}'.format(Err))
 
 
 operations = {

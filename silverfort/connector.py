@@ -19,7 +19,7 @@ class Silverfort(Connector):
             operation = operations.get(operation)
             return operation(config, params)
         except Exception as Err:
-            logger.error('Exception occurred: {}'.format(Err))
+            logger.error('Exception occurred: {0}'.format(Err))
             raise ConnectorError(Err)
 
     def check_health(self, config):
