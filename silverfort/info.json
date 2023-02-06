@@ -9,7 +9,7 @@
   "category": "Identity and Access Management",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/silverfort/502/silverfort-v1-0-0",
   "configuration": {
     "fields": [
       {
@@ -19,8 +19,9 @@
         "visible": true,
         "type": "text",
         "name": "server_url",
-        "description": "URL of the Silverfort server to which you will connect and perform the automated operations.",
-        "tooltip": "URL of the Silverfort server to which you will connect and perform the automated operations."
+        "placeholder": "",
+        "description": "Specify the URL of the Silverfort server to which you will connect and perform the automated operations.",
+        "tooltip": "Specify the URL of the Silverfort server to which you will connect and perform the automated operations."
       },
       {
         "title": "User ID",
@@ -29,8 +30,8 @@
         "visible": true,
         "type": "text",
         "name": "user_id",
-        "description": "User ID which you have created on Silverfort which is used to create an authentication token required to access the API.",
-        "tooltip": "User ID which you have created on Silverfort which is used to create an authentication token required to access the API."
+        "description": "Specify the User ID that you have created on Silverfort, which is used to create an authentication token required to access the API.",
+        "tooltip": "Specify the User ID that you have created on Silverfort, which is used to create an authentication token required to access the API."
       },
       {
         "title": "User Secret",
@@ -39,8 +40,8 @@
         "visible": true,
         "type": "password",
         "name": "user_secret",
-        "description": "User Secret of the user that is used to create an authentication token required to access the API.",
-        "tooltip": "User Secret of the user that is used to create an authentication token required to access the API."
+        "description": "Specify the User Secret that is used to create an authentication token required to access the API.",
+        "tooltip": "Specify the User Secret that is used to create an authentication token required to access the API."
       },
       {
         "title": "Verify SSL",
@@ -59,7 +60,7 @@
     {
       "operation": "get_user_risk",
       "title": "Get User Risk",
-      "description": "Retrieves details about risk associated with specific user from Silverfort based on the input parameter you have specified. You can choose among following options: 1.User Principal Name, 2.email & domain or 3.SAM account and domain",
+      "description": "Retrieves details about the risk associated with a specific user from Silverfort based on the user identification you have specified.",
       "category": "investigation",
       "annotation": "get_user_risk",
       "output_schema": {
@@ -86,8 +87,8 @@
           ],
           "name": "user_identification",
           "value": "User Principal Name",
-          "tooltip": "Select one of the method to get details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
-          "description": "Select one of the method to get details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
+          "tooltip": "Select one of the methods of user identification using which you can retrieve the details from Silverfort about the risk associated with the specific user.",
+          "description": "Select one of the methods of user identification using which you can retrieve the details from Silverfort about the risk associated with the specific user. You can choose between the following options: 'User Principal Name' (Default), Email & Domain, or SAM Account & Domain.",
           "onchange": {
             "User Principal Name": [
               {
@@ -97,8 +98,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "upn",
-                "description": "The User Principal Name of the user for which you want to get the risk details.",
-                "tooltip": "The User Principal Name of the user for which you want to get the risk details."
+                "description": "Specify the 'User Principal Name' for whom you want to retrieve the risk details from Silverfort.",
+                "tooltip": "Specify the 'User Principal Name' for whom you want to retrieve the risk details from Silverfort."
               }
             ],
             "Email & Domain": [
@@ -109,8 +110,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "email",
-                "tooltip": "The Email of the user for which you want to get the risk details.",
-                "description": "The Email of the user for which you want to get the risk details."
+                "tooltip": "Specify the email of the user for whom you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the email of the user for whom you want to retrieve the risk details from Silverfort."
               },
               {
                 "title": "Domain",
@@ -119,8 +120,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "The Domain of the user for which you want to get the risk details.",
-                "description": "The Domain of the user for which you want to get the risk details."
+                "tooltip": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort."
               }
             ],
             "SAM Account & Domain": [
@@ -131,8 +132,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "sam_account",
-                "tooltip": "The SAM Account of the user for which you want to get the risk details.",
-                "description": "The SAM Account of the user for which you want to get the risk details."
+                "tooltip": "Specify the SAM Account of the user for whom you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the SAM Account of the user for whom you want to retrieve the risk details from Silverfort."
               },
               {
                 "title": "Domain",
@@ -141,8 +142,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "The Domain of the user for which you want to get the risk details.",
-                "description": "The Domain of the user for which you want to get the risk details."
+                "tooltip": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort."
               }
             ]
           }
@@ -152,7 +153,7 @@
     {
       "operation": "get_resource_risk",
       "title": "Get Resource Risk",
-      "description": "Retrieves details about risk associated with specific resource from Silverfort based on the resource name and domain you have specified.",
+      "description": "Retrieves details about the risk associated with a specific resource from Silverfort based on the resource name and domain you have specified.",
       "category": "investigation",
       "annotation": "get_resource_risk",
       "output_schema": {
@@ -173,8 +174,8 @@
           "visible": true,
           "type": "text",
           "name": "resource_name",
-          "tooltip": "The Name of the resource for which you want to get the risk details.",
-          "description": "The Name of the resource for which you want to get the risk details."
+          "tooltip": "Specify the name of the resource for which you want to retrieve the risk details from Silverfort.",
+          "description": "Specify the name of the resource for which you want to retrieve the risk details from Silverfort."
         },
         {
           "title": "Domain",
@@ -183,15 +184,15 @@
           "visible": true,
           "type": "text",
           "name": "domain",
-          "tooltip": "The Domain of the resource for which you want to get the risk details.",
-          "description": "The Domain of the resource for which you want to get the risk details."
+          "tooltip": "Specify the domain of the resource for which you want to retrieve the risk details from Silverfort.",
+          "description": "Specify the domain of the resource for which you want to retrieve the risk details from Silverfort."
         }
       ]
     },
     {
       "operation": "update_user_risk",
       "title": "Update User Risk",
-      "description": "Updates details about risk associated with specific user based on the input parameter you have specified. You can choose among following options: 1.User Principal Name, 2.email & domain or 3.SAM account and domain",
+      "description": "Updates details about the risk associated with a specific user in Silverfort based on the user identification, risk name, severity, and other input parameters you have specified.",
       "category": "investigation",
       "annotation": "update_user_risk",
       "output_schema": {
@@ -213,8 +214,8 @@
           ],
           "name": "user_identification",
           "value": "User Principal Name",
-          "tooltip": "Select one of the method to update details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
-          "description": "Select one of the method to update details about risk associated with specific user from Silverfort. By default, this option is set as User Principal Name.",
+          "tooltip": "Select one of the methods of user identification using which you can update the details about the risk associated with the specific user in Silverfort.",
+          "description": "Select one of the methods of user identification using which you can update the details about the risk associated with the specific user in Silverfort. You can choose between the following options: 'User Principal Name' (Default), Email & Domain, or SAM Account & Domain.",
           "onchange": {
             "User Principal Name": [
               {
@@ -224,8 +225,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "upn",
-                "description": "The User Principal Name of the user for which you want to update the risk details.",
-                "tooltip": "The User Principal Name of the user for which you want to update the risk details."
+                "description": "Specify the 'User Principal Name' for whom you want to update the details about the associated risk in Silverfort.",
+                "tooltip": "Specify the 'User Principal Name' for whom you want to update the details about the associated risk in Silverfort."
               }
             ],
             "Email & Domain": [
@@ -236,8 +237,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "email",
-                "tooltip": "The Email of the user for which you want to update the risk details.",
-                "description": "The Email of the user for which you want to update the risk details."
+                "tooltip": "Specify the email of the user for whom you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the email of the user for whom you want to update the details about the associated risk in Silverfort."
               },
               {
                 "title": "Domain",
@@ -246,8 +247,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "The Domain of the user for which you want to update the risk details.",
-                "description": "The Domain of the user for which you want to update the risk details."
+                "tooltip": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort."
               }
             ],
             "SAM Account & Domain": [
@@ -258,8 +259,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "sam_account",
-                "tooltip": "The SAM Account of the user for which you want to update the risk details.",
-                "description": "The SAM Account of the user for which you want to update the risk details."
+                "tooltip": "Specify the SAM Account of the user for whom you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the SAM Account of the user for whom you want to update the details about the associated risk in Silverfort."
               },
               {
                 "title": "Domain",
@@ -268,8 +269,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "The Domain of the user for which you want to update the risk details.",
-                "description": "The Domain of the user for which you want to update the risk details."
+                "tooltip": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort."
               }
             ]
           }
@@ -281,8 +282,8 @@
           "visible": true,
           "type": "text",
           "name": "risk_name",
-          "tooltip": "The name of the risk to be updated on Silverfort.",
-          "description": "The name of the risk to be updated on Silverfort."
+          "tooltip": "Specify the name of the risk to be updated for the specific user in Silverfort.",
+          "description": "Specify the name of the risk to be updated for the specific user in Silverfort."
         },
         {
           "title": "Severity",
@@ -291,8 +292,8 @@
           "visible": true,
           "type": "text",
           "name": "severity",
-          "tooltip": "The Severity of the risk to be updated on Silverfort.",
-          "description": "The Severity of the risk to be updated on Silverfort."
+          "tooltip": "Specify the severity of the risk to be updated for the specific user in Silverfort.",
+          "description": "Specify the severity of the risk to be updated for the specific user in Silverfort."
         },
         {
           "title": "Valid For",
@@ -301,8 +302,8 @@
           "visible": true,
           "type": "integer",
           "name": "valid_for",
-          "tooltip": "Time in hours for which the risk will be valid for.",
-          "description": "Time in hours for which the risk will be valid for."
+          "tooltip": "Specify the time in hours for which the risk will be valid.",
+          "description": "Specify the time in hours for which the risk will be valid."
         },
         {
           "title": "Description",
@@ -311,15 +312,15 @@
           "visible": true,
           "type": "text",
           "name": "description",
-          "tooltip": "The Description about the risk to be updated on Silverfort.",
-          "description": "The Description about the risk to be updated on Silverfort."
+          "tooltip": "Specify the description of the risk to be updated for the specific user in Silverfort.",
+          "description": "Specify the description of the risk to be updated for the specific user in Silverfort."
         }
       ]
     },
     {
       "operation": "update_resource_risk",
       "title": "Update Resource Risk",
-      "description": "Updates details of risk associated with specific resource on Silverfort based on the resource name and domain you have specified.",
+      "description": "Updates details about the risk associated with a specific resource in Silverfort based on the resource name, domain name, risk name, severity, and other input parameters you have specified. ",
       "category": "investigation",
       "annotation": "update_resource_risk",
       "output_schema": {
@@ -335,8 +336,8 @@
           "visible": true,
           "type": "text",
           "name": "resource_name",
-          "tooltip": "The Name of the resource for which you want to update the risk details.",
-          "description": "The Name of the resource for which you want to update the risk details."
+          "tooltip": "Specify the name of the resource for which you want to update the details about the associated risk in Silverfort.",
+          "description": "Specify the name of the resource for which you want to update the details about the associated risk in Silverfort."
         },
         {
           "title": "Domain",
@@ -345,8 +346,8 @@
           "visible": true,
           "type": "text",
           "name": "domain",
-          "tooltip": "The Domain of the resource for which you want to update the risk details.",
-          "description": "The Domain of the resource for which you want to update the risk details."
+          "tooltip": "Specify the domain of the resource for which you want to update the details about the associated risk in Silverfort.",
+          "description": "Specify the domain of the resource for which you want to update the details about the associated risk in Silverfort."
         },
         {
           "title": "Risk Name",
@@ -355,8 +356,8 @@
           "visible": true,
           "type": "text",
           "name": "risk_name",
-          "tooltip": "The name of the risk to be updated on Silverfort.",
-          "description": "The name of the risk to be updated on Silverfort."
+          "tooltip": "Specify the name of the risk to be updated for the specific resource in Silverfort.",
+          "description": "Specify the name of the risk to be updated for the specific resource in Silverfort."
         },
         {
           "title": "Severity",
@@ -365,8 +366,8 @@
           "visible": true,
           "type": "text",
           "name": "severity",
-          "tooltip": "The Severity of the risk to be updated on Silverfort.",
-          "description": "The Severity of the risk to be updated on Silverfort."
+          "tooltip": "Specify the severity of the risk to be updated for the specific resource in Silverfort.",
+          "description": "Specify the severity of the risk to be updated for the specific resource in Silverfort."
         },
         {
           "title": "Valid For",
@@ -375,8 +376,8 @@
           "visible": true,
           "type": "integer",
           "name": "valid_for",
-          "tooltip": "Time in hours for which the risk will be valid for.",
-          "description": "Time in hours for which the risk will be valid for."
+          "tooltip": "Specify the time in hours for which the risk will be valid.",
+          "description": "Specify the time in hours for which the risk will be valid."
         },
         {
           "title": "Description",
@@ -385,8 +386,8 @@
           "visible": true,
           "type": "text",
           "name": "description",
-          "tooltip": "The Description about the risk to be updated on Silverfort.",
-          "description": "The Description about the risk to be updated on Silverfort."
+          "tooltip": "Specify the description of the risk to be updated for the specific resource in Silverfort.",
+          "description": "Specify the description of the risk to be updated for the specific resource in Silverfort."
         }
       ]
     }
