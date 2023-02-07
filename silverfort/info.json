@@ -98,8 +98,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "upn",
-                "description": "Specify the 'User Principal Name' for whom you want to retrieve the risk details from Silverfort.",
-                "tooltip": "Specify the 'User Principal Name' for whom you want to retrieve the risk details from Silverfort."
+                "description": "Specify the 'User Principal Name' for which you want to retrieve the risk details from Silverfort.",
+                "tooltip": "Specify the 'User Principal Name' for which you want to retrieve the risk details from Silverfort."
               }
             ],
             "Email & Domain": [
@@ -110,8 +110,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "email",
-                "tooltip": "Specify the email of the user for whom you want to retrieve the risk details from Silverfort.",
-                "description": "Specify the email of the user for whom you want to retrieve the risk details from Silverfort."
+                "tooltip": "Specify the email for which you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the email for which you want to retrieve the risk details from Silverfort."
               },
               {
                 "title": "Domain",
@@ -120,8 +120,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort.",
-                "description": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort."
+                "tooltip": "Specify the domain for which you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the domain for which you want to retrieve the risk details from Silverfort."
               }
             ],
             "SAM Account & Domain": [
@@ -132,8 +132,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "sam_account",
-                "tooltip": "Specify the SAM Account of the user for whom you want to retrieve the risk details from Silverfort.",
-                "description": "Specify the SAM Account of the user for whom you want to retrieve the risk details from Silverfort."
+                "tooltip": "Specify the SAM Account for which you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the SAM Account for which you want to retrieve the risk details from Silverfort."
               },
               {
                 "title": "Domain",
@@ -142,8 +142,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort.",
-                "description": "Specify the domain of the user for whom you want to retrieve the risk details from Silverfort."
+                "tooltip": "Specify the domain for which you want to retrieve the risk details from Silverfort.",
+                "description": "Specify the domain for which you want to retrieve the risk details from Silverfort."
               }
             ]
           }
@@ -225,8 +225,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "upn",
-                "description": "Specify the 'User Principal Name' for whom you want to update the details about the associated risk in Silverfort.",
-                "tooltip": "Specify the 'User Principal Name' for whom you want to update the details about the associated risk in Silverfort."
+                "description": "Specify the 'User Principal Name' for which you want to update the details about the associated risk in Silverfort.",
+                "tooltip": "Specify the 'User Principal Name' for which you want to update the details about the associated risk in Silverfort."
               }
             ],
             "Email & Domain": [
@@ -237,8 +237,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "email",
-                "tooltip": "Specify the email of the user for whom you want to update the details about the associated risk in Silverfort.",
-                "description": "Specify the email of the user for whom you want to update the details about the associated risk in Silverfort."
+                "tooltip": "Specify the email for which you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the email for which you want to update the details about the associated risk in Silverfort."
               },
               {
                 "title": "Domain",
@@ -247,8 +247,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort.",
-                "description": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort."
+                "tooltip": "Specify the domain for which you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the domain for which you want to update the details about the associated risk in Silverfort. "
               }
             ],
             "SAM Account & Domain": [
@@ -259,8 +259,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "sam_account",
-                "tooltip": "Specify the SAM Account of the user for whom you want to update the details about the associated risk in Silverfort.",
-                "description": "Specify the SAM Account of the user for whom you want to update the details about the associated risk in Silverfort."
+                "tooltip": "Specify the SAM Account for which you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the SAM Account for which you want to update the details about the associated risk in Silverfort."
               },
               {
                 "title": "Domain",
@@ -269,8 +269,8 @@
                 "visible": true,
                 "type": "text",
                 "name": "domain",
-                "tooltip": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort.",
-                "description": "Specify the domain of the user for whom you want to update the details about the associated risk in Silverfort."
+                "tooltip": "Specify the domain for which you want to update the details about the associated risk in Silverfort.",
+                "description": "Specify the domain for which you want to update the details about the associated risk in Silverfort."
               }
             ]
           }
